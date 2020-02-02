@@ -1,5 +1,5 @@
 owncloud:
-  image: owncloud
+  image: kranthitherising/myowncloud
   ports:
    - "80:80"
   links:
