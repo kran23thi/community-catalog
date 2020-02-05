@@ -1,9 +1,12 @@
 owncloud:
   image: kranthitherising/myowncloud
   ports:
-   - "80:80"
+   - "9180:80"
   links:
     - db
+  environment:
+    - OWNCLOUD_ADMIN_USERNAME=admin
+    - OWNCLOUD_ADMIN_PASSWORD=admin
 
 db:
   image: mariadb
