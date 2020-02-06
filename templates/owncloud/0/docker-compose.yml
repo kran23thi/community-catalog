@@ -1,5 +1,5 @@
 owncloud:
-  image: owncloud
+  image: owncloud/server:latest
   ports:
    - "9180:80"
   links:
@@ -7,6 +7,10 @@ owncloud:
   environment:
     - OWNCLOUD_ADMIN_USERNAME=admin
     - OWNCLOUD_ADMIN_PASSWORD=admin
+    OWNCLOUD_OBJECTSTORE_BUCKET myowncloudfiles
+    OWNCLOUD_OBJECTSTORE_KEY AKIA33CQ6LXJJWZVSRTS
+    OWNCLOUD_OBJECTSTORE_REGION us-east-2
+    OWNCLOUD_OBJECTSTORE_SECRET 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
 
 db:
   image: mariadb
